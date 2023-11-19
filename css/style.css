@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Yantramanav:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+.flex-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
+ grid-template-areas: 
+ "contenedor_teto contenedor_imagen"
+ ;
+  /* gap: 40px;
+  margin: 0 0 60px 0; */
+}
+
+.contenedor_imagen{
+  grid-area: contenedor_imagen;
+  height: 100%;
+}
+
+.contenedor_teto{
+  grid-area: contenedor_teto;
+}
+
+
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*pisandro boostrap*/
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 1024px){
+  .flex-container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "contenedor_imagen"
+    "contenedor_teto"
+    ;
+   }
+}
+
+@media (max-width: 600px){
+  .flex-item p, .blockquote-footer{
+      font-size: 0.9rem;
+  }
+}
+
+
