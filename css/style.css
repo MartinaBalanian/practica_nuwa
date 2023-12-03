@@ -14,8 +14,7 @@
  grid-template-areas: 
  "contenedor_teto contenedor_imagen"
  ;
-  /* gap: 40px;
-  margin: 0 0 60px 0; */
+ padding: 0 0 50px 0;
 }
 
 .contenedor_imagen{
@@ -25,14 +24,31 @@
 
 .contenedor_teto{
   grid-area: contenedor_teto;
+  /*justify-content: center;
+  align-items: baseline;*/
 }
 
+.contenedor_teto h1{
+  font-size: 40px;
+}
 
-.flex-item {
+.contenedor_teto{
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.col{
+  display: flex;
+    justify-content: center;
 }
 
 /*pisandro boostrap*/
@@ -41,6 +57,11 @@
   object-fit: cover;
 }
 
+.card:hover{
+background-color: rgb(255, 255, 255);
+box-shadow: 2px 2px 6px 2px rgb(174, 174, 174);
+transition: .3s;
+}
 
 @media (max-width: 1024px){
   .flex-container {
@@ -60,4 +81,57 @@
   }
 }
 
+.grilla{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(0, 0, 0);
+  padding: 50px;
+}
 
+.imagen_index img{
+width: 30rem;
+height: 30rem;
+object-fit: cover;
+}
+
+.imagen_index{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .texto_1, .texto_2{
+    color: rgb(255, 255, 255);
+  }
+
+  .teto_main{
+    display: flex;
+    flex-direction: column;
+    text-align:start;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px){
+    .grilla{
+      display: flex;
+      flex-direction: column;
+    }
+    .teto_main{
+      justify-content: center;
+      text-align: center;
+      padding: 30px 0 0 0;
+    }
+  }
+
+/*footer*/
+.text{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding:  0 0 10px 0;
+}
